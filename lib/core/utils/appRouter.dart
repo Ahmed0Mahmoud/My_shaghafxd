@@ -3,6 +3,7 @@ import 'package:shaghaf/features/authentication/presentation/views/forget_passwo
 import 'package:shaghaf/features/authentication/presentation/views/login_view.dart';
 import 'package:shaghaf/features/authentication/presentation/views/signup_view.dart';
 import 'package:shaghaf/features/authentication/presentation/views/verify_view.dart';
+import 'package:shaghaf/features/home/presentation/views/home_view.dart';
 
 import '../../features/splash/presentation/views/onboarding_view.dart';
 import '../../features/splash/presentation/views/splash_view.dart';
@@ -15,6 +16,7 @@ abstract class Approuter {
   static const signupViewRoute = '/signupView';
   static const forgetPasswordViewRoute = '/forgetPasswordView';
   static const verifyViewRoute = '/verifyView';
+  static const homeViewRoute = '/homeView';
 
   static final router = GoRouter(
     routes: [
@@ -41,6 +43,10 @@ abstract class Approuter {
       GoRoute(
         path: verifyViewRoute,
         builder: (context, state) => const VerifyView(),
+      ),
+      GoRoute(
+        path: homeViewRoute,
+        builder: (context, state) => const HomeView(),
       ),
     ],
   );

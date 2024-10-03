@@ -12,8 +12,23 @@ abstract class Styles {
     fontWeight: FontWeight.w400,
 
   );
+  static const textStyle13 = TextStyle(
+    fontSize: 13,
+    fontWeight: FontWeight.w400,
+
+  );
   static const textStyle10 = TextStyle(
     fontSize: 10,
+    fontWeight: FontWeight.w400,
+
+  );
+  static const textStyle9 = TextStyle(
+    fontSize:9,
+    fontWeight: FontWeight.w400,
+
+  );
+  static const textStyle6 = TextStyle(
+    fontSize:6,
     fontWeight: FontWeight.w400,
 
   );
@@ -27,8 +42,18 @@ abstract class Styles {
     fontWeight: FontWeight.w400,
 
   );
+  static const textStyle18 = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w400,
+
+  );
   static const textStyle20 = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.w600,
   );
+  static const textStyle24 = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.w600,
+  );
+
 }

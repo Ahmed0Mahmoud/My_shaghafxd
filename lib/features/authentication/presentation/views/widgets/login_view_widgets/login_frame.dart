@@ -34,7 +34,9 @@ class LoginFrame extends StatelessWidget {
                 GoRouter.of(context).push(Approuter.forgetPasswordViewRoute);
               }, child: Text('Forget Password?',style: Styles.textStyle10.copyWith(fontWeight: FontWeight.bold),)),
             ),
-            CustomGreenButton(title: 'LOGIN', onPressed: (){},),
+            CustomGreenButton(title: 'LOGIN', onPressed: (){
+              GoRouter.of(context).pushReplacement(Approuter.homeViewRoute);
+            },),
             const SizedBox(height: 16,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

@@ -18,16 +18,14 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   }
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        width: double.infinity,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/splash_screen.jpg'),
-            fit: BoxFit.fill,
-          ),
-
+    return Container(
+      width: double.infinity,
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage('assets/splash_screen.jpg'),
+          fit: BoxFit.fill,
         ),
+
       ),
     );
   }

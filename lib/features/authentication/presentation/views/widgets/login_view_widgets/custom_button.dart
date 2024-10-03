@@ -15,10 +15,10 @@ class CustomGreenButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 9,right: 10),
       child: ElevatedButton(
-        onPressed: onPressed, // Call the passed function when button is pressed
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: KgreenColor,
-          minimumSize: const Size(323, 37), // Set the width and height
+          minimumSize: const Size(323, 37),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
