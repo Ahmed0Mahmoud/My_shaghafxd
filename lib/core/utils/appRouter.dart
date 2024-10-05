@@ -46,7 +46,7 @@ abstract class Approuter {
       ),
       GoRoute(
         path: homeViewRoute,
-        builder: (context, state) => const HomeView(),
+        builder: (context, state) => HomeView(),
       ),
     ],
   );
