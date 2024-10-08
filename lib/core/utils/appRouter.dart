@@ -3,7 +3,10 @@ import 'package:shaghaf/features/authentication/presentation/views/forget_passwo
 import 'package:shaghaf/features/authentication/presentation/views/login_view.dart';
 import 'package:shaghaf/features/authentication/presentation/views/signup_view.dart';
 import 'package:shaghaf/features/authentication/presentation/views/verify_view.dart';
+import 'package:shaghaf/features/home/presentation/views/date_time_view.dart';
 import 'package:shaghaf/features/home/presentation/views/home_view.dart';
+import 'package:shaghaf/features/home/presentation/views/room_details_view.dart';
+import 'package:shaghaf/features/home/presentation/views/widgets/rooms_view.dart';
 
 import '../../features/splash/presentation/views/onboarding_view.dart';
 import '../../features/splash/presentation/views/splash_view.dart';
@@ -17,6 +20,9 @@ abstract class Approuter {
   static const forgetPasswordViewRoute = '/forgetPasswordView';
   static const verifyViewRoute = '/verifyView';
   static const homeViewRoute = '/homeView';
+  static const roomsViewRoute = '/roomView';
+  static const roomDetailsViewRoute = '/roomDetailsView';
+  static const dateTimeViewRoute = '/dateTimeView';
 
   static final router = GoRouter(
     routes: [
@@ -47,6 +53,21 @@ abstract class Approuter {
       GoRoute(
         path: homeViewRoute,
         builder: (context, state) => HomeView(),
+      ),
+      GoRoute(
+        path: roomsViewRoute,
+        builder: (context, state) => RoomsView(),
+      ),
+      GoRoute(
+        path: dateTimeViewRoute,
+        builder: (context, state) => DateTimeView(),
+      ),
+      GoRoute(
+        path: roomDetailsViewRoute,
+        builder: (context, state){
+          final String roomName = state.extra as String;
+          return RoomDetailsView(roomName: roomName);
+        }
       ),
     ],
   );

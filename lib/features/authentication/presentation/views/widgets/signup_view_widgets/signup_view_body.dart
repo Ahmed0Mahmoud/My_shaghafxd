@@ -10,7 +10,10 @@ class SignupViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        CustomBackArrow(),
+        Padding(
+          padding: const EdgeInsets.only(right: 342),
+          child: CustomBackArrow(),
+        ),
         SizedBox(height: 36,),
         ShagafLogo(),
         SizedBox(height: 32.75),

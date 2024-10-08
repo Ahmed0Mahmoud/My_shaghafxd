@@ -13,7 +13,7 @@ class RateShape extends StatelessWidget {
       width: 51,
       height: 22,
       decoration: BoxDecoration(
-        color: Color(0xff90483d),
+        color: Colors.red.withOpacity(0.6),
         borderRadius: BorderRadius.circular(20),
 
       ),

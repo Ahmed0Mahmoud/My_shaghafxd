@@ -9,7 +9,7 @@ class CustomBackArrow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 50,right: 342),
+      padding: const EdgeInsets.only(top: 50),
       child: IconButton(onPressed: (){
         GoRouter.of(context).pop();
       }, icon: const Icon(Icons.keyboard_arrow_left_outlined,size: 40,)),

@@ -19,6 +19,7 @@ class LocationShape extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Icon(Icons.location_on_outlined,color: Colors.white,),
           Text(title,style: Styles.textStyle14.copyWith(color: Colors.white),)
