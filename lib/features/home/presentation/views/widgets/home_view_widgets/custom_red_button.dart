@@ -14,14 +14,14 @@ class CustomRedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialButton(
       onPressed: onPressed,
-      child: Text(
-        title,
-        style: Styles.textStyle16.copyWith(color: Colors.white),textAlign: TextAlign.center,
-      ),
       color: KredColor,
       height: 48,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
+      ),
+      child: Text(
+        title,
+        style: Styles.textStyle16.copyWith(color: Colors.white),textAlign: TextAlign.center,
       ),
     );
   }

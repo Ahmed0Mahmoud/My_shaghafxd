@@ -6,10 +6,14 @@ import 'package:shaghaf/features/authentication/presentation/views/verify_view.d
 import 'package:shaghaf/features/home/presentation/views/book_view.dart';
 import 'package:shaghaf/features/home/presentation/views/booking_review_view.dart';
 import 'package:shaghaf/features/home/presentation/views/date_time_view.dart';
+import 'package:shaghaf/features/home/presentation/views/event_details_view.dart';
 import 'package:shaghaf/features/home/presentation/views/home_fetures_view.dart';
 import 'package:shaghaf/features/home/presentation/views/home_view.dart';
+import 'package:shaghaf/features/home/presentation/views/offers_view.dart';
+import 'package:shaghaf/features/home/presentation/views/orders_view.dart';
 import 'package:shaghaf/features/home/presentation/views/room_details_view.dart';
 
+import '../../features/home/presentation/views/events_view.dart';
 import '../../features/home/presentation/views/rooms_view.dart';
 import '../../features/splash/presentation/views/onboarding_view.dart';
 import '../../features/splash/presentation/views/splash_view.dart';
@@ -29,6 +33,10 @@ abstract class Approuter {
   static const bookingReviewRoute = '/bookingReviewView';
   static const bookViewRoute = '/bookView';
   static const homeFeaturesRoute = '/homeFeaturesView';
+  static const offersViewRoute = '/offersViewView';
+  static const eventsViewRoute = '/eventsViewView';
+  static const ordersViewRoute = '/ordersViewView';
+  static const eventsViewDetailsRoute = '/eventsDetailsView';
 
   static final router = GoRouter(
     routes: [
@@ -82,6 +90,22 @@ abstract class Approuter {
       GoRoute(
         path: bookViewRoute,
         builder: (context, state) => BookView(),
+      ),
+      GoRoute(
+        path: offersViewRoute,
+        builder: (context, state) => OffersView(),
+      ),
+      GoRoute(
+        path: eventsViewRoute,
+        builder: (context, state) => EventsView(),
+      ),
+      GoRoute(
+        path: ordersViewRoute,
+        builder: (context, state) => OrdersView(),
+      ),
+      GoRoute(
+        path: eventsViewDetailsRoute,
+        builder: (context, state) => EventDetailsView(),
       ),
       GoRoute(
         path: roomDetailsViewRoute,

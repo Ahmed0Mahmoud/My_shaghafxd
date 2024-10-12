@@ -10,7 +10,7 @@ class RoomCard extends StatelessWidget {
   final double rating;
   final VoidCallback onPressed;
 
-  RoomCard({
+  const RoomCard({super.key,
     required this.imageUrl,
     required this.roomName,
     required this.rating,

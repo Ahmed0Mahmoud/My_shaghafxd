@@ -4,6 +4,8 @@ import 'package:shaghaf/core/utils/styles.dart';
 import 'package:shaghaf/features/home/presentation/views/widgets/book_view_widgets/past_container.dart';
 import 'package:shaghaf/features/home/presentation/views/widgets/book_view_widgets/upcoming_rooms.dart';
 
+import 'custom_appbar.dart';
+
 class BookViewBody extends StatefulWidget {
   const BookViewBody({super.key});
 
@@ -21,14 +23,7 @@ class _BookViewBodyState extends State<BookViewBody> {
         children: [
           const Padding(
             padding: EdgeInsets.only(left: 24, right: 24, top: 50),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Icon(Icons.notifications_none),
-                Text('Booking History', style: Styles.textStyle16),
-                Icon(Icons.filter_list_sharp),
-              ],
-            ),
+            child: CustomAppBar(title: 'Booking History',),
           ),
           const SizedBox(height: 24),
           Padding(
@@ -99,3 +94,4 @@ class _BookViewBodyState extends State<BookViewBody> {
     );
   }
 }
+

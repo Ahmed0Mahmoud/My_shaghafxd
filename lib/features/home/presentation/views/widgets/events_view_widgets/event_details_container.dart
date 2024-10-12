@@ -5,16 +5,16 @@ import 'package:shaghaf/constatnts.dart';
 import 'package:shaghaf/core/utils/appRouter.dart';
 
 import '../../../../../../core/utils/styles.dart';
-import 'amenity_row_widget.dart';
-class RoomDetailsContainer extends StatefulWidget {
-  const RoomDetailsContainer({super.key});
+import '../rooms_view_widgets/amenity_row_widget.dart';
+class EventDetailsContainer extends StatefulWidget {
+  const EventDetailsContainer({super.key});
 
   @override
-  State<RoomDetailsContainer> createState() => _RoomDetailsContainerState();
+  State<EventDetailsContainer> createState() => _EventDetailsContainerState();
 }
 
-class _RoomDetailsContainerState extends State<RoomDetailsContainer> {
-  String? plan = '60.0 EGP/Hour' ;
+class _EventDetailsContainerState extends State<EventDetailsContainer> {
+  String? plan = '200.0 EGP/Person' ;
 
   @override
   Widget build(BuildContext context) {
@@ -38,58 +38,37 @@ class _RoomDetailsContainerState extends State<RoomDetailsContainer> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                        'Training Room',
+                        'Details',
                         style: Styles.textStyle18.copyWith(color: Colors.red,fontWeight: FontWeight.bold)
                     ),
                   ],
                 ),
                 SizedBox(height: 16,),
-                Row(
-                  children: [
-                    Icon(Icons.chair_outlined, color: Colors.red),
-                    SizedBox(width: 4),
-                    Text('30 Seats',style: Styles.textStyle14,),
-                  ],
-                ),
-                SizedBox(height: 10),
                 Text(
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-                  style: TextStyle(fontSize: 16),
+                  'We will learn how to make ceramics and use them after that',
+                  style: TextStyle(fontSize: 14),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 32),
                 Text(
-                    'Amenities',
-                    style: Styles.textStyle18.copyWith(color: Colors.red,fontWeight: FontWeight.bold)
+                  'The workshop will last for one day and last 3 hours. We will learn about it',
+                  style: TextStyle(fontSize: 14),
                 ),
-                SizedBox(height: 10),
-                const Column(
-                  children: [
-                    AmenityRow(icon: Icons.print, text:'Printer, Scanner and photocopier'),
-                    AmenityRow(icon: Icons.wifi, text:'Wi-fi'),
-                    AmenityRow(icon: Icons.local_cafe, text: 'Free coffee'),
-                    AmenityRow(icon: Icons.videocam, text:'Video Conf'),
-                    AmenityRow(icon: Icons.tv, text: 'LED screen'),
-                  ],
+                SizedBox(height: 32),
+                Text(
+                  'We will learn about the types of clay to differentiate the final result of the product',
+                  style: TextStyle(fontSize: 14),
                 ),
-                SizedBox(height: 20),
-                // Location section
-                Row(
-                  children: [
-                    Icon(Icons.location_on_outlined,color: Colors.red,),
-                    Text(
-                        'Location',
-                        style: Styles.textStyle18.copyWith(color: Colors.red,fontWeight: FontWeight.bold)
-                    ),
-                  ],
+                SizedBox(height: 32),
+                Text(
+                  'How do I make shapes with clay without them cracking?',
+                  style: TextStyle(fontSize: 14),
                 ),
-                SizedBox(height: 10),
-                Container(
-                  height: 146,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(image: AssetImage('assets/mapSample.jpg'),fit: BoxFit.fill)
-                  ),
+                SizedBox(height: 32),
+                Text(
+                  'We will burn the shapes we made and find out how they burn so that you can use them after that and live with you',
+                  style: TextStyle(fontSize: 14),
                 ),
-                SizedBox(height: 16,),
+                SizedBox(height: 60,),
 
               ],
             ),
@@ -186,7 +165,7 @@ class _RoomDetailsContainerState extends State<RoomDetailsContainer> {
                                             },
                                             style: ButtonStyle(backgroundColor: WidgetStateProperty.all(KgreenColor)),
                                             child: Text(
-                                              'Select Date',
+                                              'Book Now',
                                               style: Styles.textStyle18.copyWith(fontWeight: FontWeight.w600, color: Colors.white),
                                             ),
                                           ),
@@ -227,7 +206,7 @@ class _RoomDetailsContainerState extends State<RoomDetailsContainer> {
                         borderRadius: BorderRadius.circular(20),
                       ),
                     ),
-                    child: Text('Select Date',style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w700,color: Colors.white),),
+                    child: Text('Book Now',style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w700,color: Colors.white),),
                   ),
                 ],
               ),

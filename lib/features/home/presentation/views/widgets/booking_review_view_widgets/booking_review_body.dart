@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shaghaf/constatnts.dart';
 import 'package:shaghaf/core/utils/styles.dart';
-import 'package:shaghaf/features/authentication/presentation/views/widgets/login_view_widgets/custom_back_arrow.dart';
 import 'package:shaghaf/features/authentication/presentation/views/widgets/login_view_widgets/custom_button.dart';
-import 'package:shaghaf/features/home/presentation/views/widgets/booking_review_view_widgets/room_card.dart';
-import 'package:shaghaf/features/home/presentation/views/widgets/rooms_view_widgets/amenity_row_widget.dart';
 
 import 'booking_details_card.dart';
 class BookingReviewBody extends StatelessWidget {
@@ -15,22 +13,6 @@ class BookingReviewBody extends StatelessWidget {
       physics: BouncingScrollPhysics(),
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(right: 148),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CustomBackArrow(),
-                Padding(
-                  padding: const EdgeInsets.only(top: 50),
-                  child: Text('Booking Review',style: Styles.textStyle16,),
-                ),
-              ],
-            ),
-          ),
-          SizedBox(height: 20,),
-          RoomCard(),
-          SizedBox(height: 24,),
           BookingDetailsCard(),
           SizedBox(height: 24,),
           Container(
@@ -49,7 +31,12 @@ class BookingReviewBody extends StatelessWidget {
                   SizedBox(height: 8,),
                   Text('You will not be debited until your booking is confirmed',style: Styles.textStyle12.copyWith(color: Color(0xff464646)),),
                  SizedBox(height: 15,),
-                  AmenityRow(icon: Icons.check_circle_sharp, text: 'Add card')
+                  Row(
+                    children: [
+                      Icon(Icons.check_circle_sharp,color: KredColor,),
+                      Text('Add card'),
+                    ],
+                  )
                 ],
               ),
             ),
@@ -65,7 +52,7 @@ class BookingReviewBody extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 12),
+                  padding: const EdgeInsets.only(left: 12,right: 12,top: 8),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -83,7 +70,7 @@ class BookingReviewBody extends StatelessWidget {
                           style: TextStyle(color: Colors.red),
                         ),
                       )
-      
+
                     ],
                   ),
                 ),
@@ -147,7 +134,7 @@ class BookingReviewBody extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 16,),
+          SizedBox(height: 52,),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
             child: SizedBox(
@@ -166,7 +153,7 @@ class BookingReviewBody extends StatelessWidget {
             ),
             child: Text('Cancellation Policy',style: Styles.textStyle16.copyWith(color: Color(0xff455A64)),),
           ), //cancellation button
-          SizedBox(height: 16,),
+          SizedBox(height: 24,),
         ]
       ),
     );

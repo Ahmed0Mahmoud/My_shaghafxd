@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/utils/styles.dart';
-import '../rooms_view_widgets/amenity_row_widget.dart';
 
 class BookingDetailsCard extends StatelessWidget {
   const BookingDetailsCard({
@@ -51,7 +50,23 @@ class BookingDetailsCard extends StatelessWidget {
                                 Text('Tues, 13 Feb 2024 10:00 PM'),
                               ],
                             ),
-                            AmenityRow(icon: Icons.chair_outlined, text: '1 Seat')
+                            SizedBox(height: 14,),
+                            Row(
+                              children: [
+                                Icon(Icons.circle, color: Colors.red, size: 10),
+                                SizedBox(width: 8),
+                                Text('Tues, 13 Feb 2024 10:00 PM'),
+                              ],
+                            ),
+                            SizedBox(height: 14,),
+                            Row(
+                              children: [
+                                Icon(Icons.circle, color: Colors.red, size: 10),
+                                SizedBox(width: 8),
+                                Text('Tues, 13 Feb 2024 10:00 PM'),
+                              ],
+                            ),
+                            //Expanded(child: AmenityRow(icon: Icons.chair_outlined, text: '1 Seat'))
                           ],
                         ),
                       ])

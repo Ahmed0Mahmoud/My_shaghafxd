@@ -51,24 +51,29 @@ class HomeViewClipPathes extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                ClipPath(
-                  clipper: ContainerClipper2(),
-                  child: Container(
-                    width: 163,
-                    height: 200,
-                    decoration: BoxDecoration(
-                        color: KredColor.withOpacity(.65),
-                        borderRadius: BorderRadius.circular(20)),
-                    child: Padding(
-                      padding:  EdgeInsets.only(top: 56.0,left: 6),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("Orders",style: Styles.textStyle18.copyWith(
-                            color: Colors.white,
-                          ),),
-                          Image(image: AssetImage('assets/Ecommerce web page-amico 1.png'),width: 115,height: 115,),
-                        ],
+                InkWell(
+                  onTap: (){
+                    GoRouter.of(context).push(Approuter.ordersViewRoute);
+                  },
+                  child: ClipPath(
+                    clipper: ContainerClipper2(),
+                    child: Container(
+                      width: 163,
+                      height: 200,
+                      decoration: BoxDecoration(
+                          color: KredColor.withOpacity(.65),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Padding(
+                        padding:  EdgeInsets.only(top: 56.0,left: 6),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Orders",style: Styles.textStyle18.copyWith(
+                              color: Colors.white,
+                            ),),
+                            Image(image: AssetImage('assets/Ecommerce web page-amico 1.png'),width: 115,height: 115,),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -77,7 +82,7 @@ class HomeViewClipPathes extends StatelessWidget {
                // const Spacer(),
                 InkWell(
                   onTap: (){
-                    //GoRouter.of(context).push(AppRouter.kEventsView);
+                    GoRouter.of(context).push(Approuter.eventsViewRoute);
                   },
                   child: ClipPath(
                     clipper: ContainerClipper3(),
