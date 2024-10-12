@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shaghaf/features/authentication/presentation/views/widgets/login_view_widgets/custom_back_arrow.dart';
 import 'package:shaghaf/features/authentication/presentation/views/widgets/verify_view_widgets/verify_view_body.dart';
 class VerifyView extends StatelessWidget {
   const VerifyView({super.key});
@@ -6,6 +7,9 @@ class VerifyView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: CustomBackArrow(),
+      ),
       resizeToAvoidBottomInset: false,
       body: VerifyViewBody(),
     );

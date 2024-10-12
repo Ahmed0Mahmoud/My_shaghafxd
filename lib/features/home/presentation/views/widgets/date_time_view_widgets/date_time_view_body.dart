@@ -21,21 +21,6 @@ class _DateTimeViewBodyState extends State<DateTimeViewBody> {
   Widget build(BuildContext context) {
     return Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(right: 104),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const CustomBackArrow(),
-                Padding(
-                  padding: const EdgeInsets.only(top: 50),
-                  child: Text('Select date and time',
-                    style: Styles.textStyle17.copyWith(
-                        fontWeight: FontWeight.w500),),
-                ),
-              ],
-            ),
-          ),
           const SizedBox(height: 12,),
           const Padding(
             padding:  EdgeInsets.symmetric(horizontal: 12),

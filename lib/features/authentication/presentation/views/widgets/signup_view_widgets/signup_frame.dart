@@ -32,7 +32,12 @@ class SignupFrame extends StatelessWidget {
             const SizedBox(height: 24,),
             const CustomTextField(title: 'Confirm Pasword', hintText: 'Confirm password', icon: Icons.lock_open_sharp,),
             const SizedBox(height: 24,),
-            CustomGreenButton(title: 'SIGN UP', onPressed: () {},),
+            Padding(
+              padding: const EdgeInsets.only(left: 9,right: 10),
+              child: SizedBox(
+                width: double.infinity,
+                  child: CustomGreenButton(title: 'SIGN UP', onPressed: () {},)),
+            ),
             const SizedBox(height: 16,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

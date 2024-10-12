@@ -3,11 +3,14 @@ import 'package:shaghaf/features/authentication/presentation/views/forget_passwo
 import 'package:shaghaf/features/authentication/presentation/views/login_view.dart';
 import 'package:shaghaf/features/authentication/presentation/views/signup_view.dart';
 import 'package:shaghaf/features/authentication/presentation/views/verify_view.dart';
+import 'package:shaghaf/features/home/presentation/views/book_view.dart';
+import 'package:shaghaf/features/home/presentation/views/booking_review_view.dart';
 import 'package:shaghaf/features/home/presentation/views/date_time_view.dart';
+import 'package:shaghaf/features/home/presentation/views/home_fetures_view.dart';
 import 'package:shaghaf/features/home/presentation/views/home_view.dart';
 import 'package:shaghaf/features/home/presentation/views/room_details_view.dart';
-import 'package:shaghaf/features/home/presentation/views/widgets/rooms_view.dart';
 
+import '../../features/home/presentation/views/rooms_view.dart';
 import '../../features/splash/presentation/views/onboarding_view.dart';
 import '../../features/splash/presentation/views/splash_view.dart';
 
@@ -23,6 +26,9 @@ abstract class Approuter {
   static const roomsViewRoute = '/roomView';
   static const roomDetailsViewRoute = '/roomDetailsView';
   static const dateTimeViewRoute = '/dateTimeView';
+  static const bookingReviewRoute = '/bookingReviewView';
+  static const bookViewRoute = '/bookView';
+  static const homeFeaturesRoute = '/homeFeaturesView';
 
   static final router = GoRouter(
     routes: [
@@ -61,6 +67,21 @@ abstract class Approuter {
       GoRoute(
         path: dateTimeViewRoute,
         builder: (context, state) => DateTimeView(),
+      ),
+      GoRoute(
+        path: bookingReviewRoute,
+        builder: (context, state) => BookingReviewView(),
+      ),
+      GoRoute(
+        path: homeFeaturesRoute,
+        builder: (context, state){
+          final word = state.extra as String;
+          return HomeFeturesView(word: word,);
+          }
+      ),
+      GoRoute(
+        path: bookViewRoute,
+        builder: (context, state) => BookView(),
       ),
       GoRoute(
         path: roomDetailsViewRoute,

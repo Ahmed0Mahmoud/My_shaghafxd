@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shaghaf/core/utils/styles.dart';
-import 'package:shaghaf/features/authentication/presentation/views/widgets/login_view_widgets/custom_back_arrow.dart';
 import 'package:shaghaf/features/home/presentation/views/widgets/rooms_view_widgets/room_card.dart';
 class RoomsViewBody extends StatelessWidget {
   const RoomsViewBody({super.key});
@@ -9,16 +8,6 @@ class RoomsViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Row(
-          children: [
-            CustomBackArrow(),
-            SizedBox(width: 111,),
-            Padding(
-              padding: const EdgeInsets.only(top: 50),
-              child: Text('Rooms',style: Styles.textStyle20,),
-            ),
-          ],
-        ),
         Expanded(
           child: ListView(
             padding: EdgeInsets.symmetric(horizontal: 12),

@@ -36,8 +36,8 @@ class RoomDetailsViewBody extends StatelessWidget {
                 child: LocationShape(title: 'Roxy'),
             ),
             Positioned(
-              top: -6,
-                left: 6,
+              top: 45,
+                left: 7,
                 child: CustomBackArrow()
             ),
             RoomDetailsContainer(),

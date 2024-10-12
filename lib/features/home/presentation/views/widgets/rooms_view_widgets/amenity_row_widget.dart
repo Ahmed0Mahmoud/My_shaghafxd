@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shaghaf/core/utils/styles.dart';
 
 class AmenityRow extends StatelessWidget {
   const AmenityRow({
@@ -18,7 +19,8 @@ class AmenityRow extends StatelessWidget {
         children: [
           Icon(icon, color: Colors.red),
           SizedBox(width: 10),
-          Text(text),
+          Expanded(child: Text(text,style: Styles.textStyle16,)),
+
         ],
       ),
     );

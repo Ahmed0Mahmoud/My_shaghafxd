@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:shaghaf/core/utils/styles.dart';
 import 'package:shaghaf/features/home/presentation/views/widgets/home_view_widgets/rate_shape.dart';
 import 'adverts_listview.dart';
-import 'categories_grid.dart';
 import 'custom_red_button.dart';
+import 'features_list.dart';
+import 'home_view_clip_pathes.dart';
 import 'location_shape.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -75,36 +76,26 @@ class HomeViewBody extends StatelessWidget {
            Padding(
                padding: const EdgeInsets.only(left: 24,top: 20),
                child: Column(
-                children: [
-                SizedBox(
-                height: 150,
-                child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                Text('Advertisement',style: Styles.textStyle20),
-                SizedBox(height: 12,),
-                AdvertsListview(),
-      ],
-      ),
-      )
-      ],
-      ),
-      ),
+                    children: [
+                      SizedBox(
+                      height: 150,
+                      child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                      Text('Advertisement',style: Styles.textStyle20),
+                      SizedBox(height: 12,),
+                      AdvertsListview(),
+                    ],
+                    ),
+                    )
+                  ],
+              ),
+              ),
           SizedBox(height: 24,),
           Padding(
              padding: const EdgeInsets.only(left: 24, right: 24),
-             child: Row(
-             children: [
-               CustomRedButton(title: 'Membership',),
-                SizedBox(width: 6),
-                CustomRedButton(title: 'Birthday'),
-                SizedBox(width: 6),
-                 Expanded(
-                child: CustomRedButton(title: 'Photo session'),
-      ),
-      ],
-      )
-      ),
+             child: FeaturesList()
+            ),
            SizedBox(height: 20,),
            Padding(
              padding: const EdgeInsets.only(left: 24),
@@ -117,7 +108,7 @@ class HomeViewBody extends StatelessWidget {
            SizedBox(height: 12,),
            Padding(
              padding: const EdgeInsets.symmetric(horizontal: 24),
-             child: CategoriesGrid(),
+             child: HomeViewClipPathes(),
            ),
            SizedBox(height: 15,),
          ],
@@ -128,6 +119,7 @@ class HomeViewBody extends StatelessWidget {
 
   }
 }
+
 
 
 

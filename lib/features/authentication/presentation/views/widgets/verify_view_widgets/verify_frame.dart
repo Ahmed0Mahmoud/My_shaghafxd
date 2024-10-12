@@ -50,9 +50,15 @@ class VerifyFrame extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 40,),
-            CustomGreenButton(title: 'Verify', onPressed: (){
-              showSuccessDialog(context);
-            },),
+            Padding(
+              padding: const EdgeInsets.only(left: 9,right: 10),
+              child: SizedBox(
+                width: double.infinity,
+                child: CustomGreenButton(title: 'Verify', onPressed: (){
+                  showSuccessDialog(context);
+                },),
+              ),
+            ),
             const SizedBox(height:49,),
           ],
         ),

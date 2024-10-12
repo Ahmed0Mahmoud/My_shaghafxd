@@ -46,7 +46,7 @@ class RoomCard extends StatelessWidget {
                   color: Colors.white,
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
+                      color: Colors.black.withOpacity(0.25),
                       spreadRadius: 0,
                       blurRadius: 4,
                       offset: Offset(0, 4),

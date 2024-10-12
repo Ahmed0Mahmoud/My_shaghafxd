@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:shaghaf/core/utils/appRouter.dart';
 
 import '../../../../../../constatnts.dart';
 import '../../../../../../core/utils/styles.dart';
@@ -28,6 +30,7 @@ class _ProcessButtonState extends State<ProcessButton> {
             setState(() {
               title = 'Loading...';
               color = const Color(0xff919393);
+              GoRouter.of(context).push(Approuter.bookingReviewRoute);
             });
           },
           style: TextButton.styleFrom(

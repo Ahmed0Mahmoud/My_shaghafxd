@@ -37,9 +37,15 @@ class ForgetPasswordFrame extends StatelessWidget {
             const SizedBox(height: 47,),
             const CustomTextField(title: 'Phone Number', hintText: 'Enter your phone number', icon: Icons.call_outlined),
             const SizedBox(height: 24,),
-            CustomGreenButton(title: 'Reset Password', onPressed: (){
-              GoRouter.of(context).push(Approuter.verifyViewRoute);
-            },),
+            Padding(
+              padding: const EdgeInsets.only(left: 9,right: 10),
+              child: SizedBox(
+                width: double.infinity,
+                child: CustomGreenButton(title: 'Reset Password', onPressed: (){
+                  GoRouter.of(context).push(Approuter.verifyViewRoute);
+                },),
+              ),
+            ),
             const SizedBox(height: 35,),
           ],
         ),
