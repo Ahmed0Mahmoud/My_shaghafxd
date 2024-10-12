@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shaghaf/core/utils/styles.dart';
 import 'package:shaghaf/features/home/presentation/views/widgets/rooms_view_widgets/room_card.dart';
 class RoomsViewBody extends StatelessWidget {
   const RoomsViewBody({super.key});

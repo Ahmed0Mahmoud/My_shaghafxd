@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:shaghaf/core/utils/styles.dart';
 import 'package:shaghaf/features/home/presentation/views/widgets/home_view_widgets/rate_shape.dart';
 import 'adverts_listview.dart';
-import 'custom_red_button.dart';
 import 'features_list.dart';
 import 'home_view_clip_pathes.dart';
 import 'location_shape.dart';
