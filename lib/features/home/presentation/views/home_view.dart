@@ -4,7 +4,6 @@ import 'package:shaghaf/constatnts.dart';
 import 'package:shaghaf/core/utils/assets.dart';
 import 'package:shaghaf/core/utils/styles.dart';
 import 'package:shaghaf/features/home/presentation/views/book_view.dart';
-import 'package:shaghaf/features/home/presentation/views/events_view.dart';
 import 'package:shaghaf/features/home/presentation/views/offers_view.dart';
 import 'package:shaghaf/features/home/presentation/views/widgets/home_view_widgets/home_view_body.dart';
 import 'package:shaghaf/features/home/presentation/views/widgets/rooms_view_widgets/amenity_row_widget.dart';

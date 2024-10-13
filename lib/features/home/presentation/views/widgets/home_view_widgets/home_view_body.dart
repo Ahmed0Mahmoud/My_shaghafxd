@@ -3,7 +3,7 @@ import 'package:shaghaf/core/utils/styles.dart';
 import 'package:shaghaf/features/home/presentation/views/widgets/home_view_widgets/rate_shape.dart';
 import 'adverts_listview.dart';
 import 'features_list.dart';
-import 'home_view_clip_pathes.dart';
+import 'clip_pathes.dart';
 import 'location_shape.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -107,7 +107,7 @@ class HomeViewBody extends StatelessWidget {
            SizedBox(height: 12,),
            Padding(
              padding: const EdgeInsets.symmetric(horizontal: 24),
-             child: HomeViewClipPathes(),
+             child: ClipPathes(),
            ),
            SizedBox(height: 15,),
          ],

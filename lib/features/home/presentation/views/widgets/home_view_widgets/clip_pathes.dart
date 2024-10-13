@@ -4,9 +4,10 @@ import 'package:shaghaf/constatnts.dart';
 
 import '../../../../../../core/utils/appRouter.dart';
 import '../../../../../../core/utils/styles.dart';
+import 'clippers.dart';
 
-class HomeViewClipPathes extends StatelessWidget {
-  const HomeViewClipPathes({super.key});
+class ClipPathes extends StatelessWidget {
+  const ClipPathes({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class HomeViewClipPathes extends StatelessWidget {
             GoRouter.of(context).push(Approuter.roomsViewRoute);
           },
           child: ClipPath(
-            clipper: ContainerClipper1(),
+            clipper: RoomsClip(),
             child: Container(
               width: double.infinity,
               height: 200,
@@ -56,7 +57,7 @@ class HomeViewClipPathes extends StatelessWidget {
                     GoRouter.of(context).push(Approuter.ordersViewRoute);
                   },
                   child: ClipPath(
-                    clipper: ContainerClipper2(),
+                    clipper: OrdersClip(),
                     child: Container(
                       width: 163,
                       height: 200,
@@ -85,7 +86,7 @@ class HomeViewClipPathes extends StatelessWidget {
                     GoRouter.of(context).push(Approuter.eventsViewRoute);
                   },
                   child: ClipPath(
-                    clipper: ContainerClipper3(),
+                    clipper: EventsClip(),
                     child: Container(
                       width: 163,
                       height: 200,
@@ -115,58 +116,4 @@ class HomeViewClipPathes extends StatelessWidget {
   }
 }
 
-class ContainerClipper1 extends CustomClipper<Path> {
-  var path = Path();
 
-  @override
-  getClip(Size size) {
-    path.lineTo(0, size.height * .75);
-    path.lineTo(size.width * .5, size.height);
-    path.lineTo(size.width, size.height * .75);
-    path.lineTo(size.width, 0);
-    return path;
-  }
-
-  @override
-  bool shouldReclip(CustomClipper oldClipper) {
-    return true;
-  }
-}
-
-class ContainerClipper2 extends CustomClipper<Path> {
-  var path = Path();
-
-  @override
-  getClip(Size size) {
-    path.moveTo(0, size.height * .1);
-    path.lineTo(0, size.height);
-    path.lineTo(size.width, size.height);
-    path.lineTo(size.width, size.height * .35);
-    path.lineTo(0, size.height * .1);
-    return path;
-  }
-
-  @override
-  bool shouldReclip(CustomClipper oldClipper) {
-    return true;
-  }
-}
-
-class ContainerClipper3 extends CustomClipper<Path> {
-  var path = Path();
-
-  @override
-  getClip(Size size) {
-    path.moveTo(0, size.height * .35);
-    path.lineTo(0, size.height);
-    path.lineTo(size.width, size.height);
-    path.lineTo(size.width, size.height * .1);
-    path.lineTo(0, size.height * .35);
-    return path;
-  }
-
-  @override
-  bool shouldReclip(CustomClipper oldClipper) {
-    return true;
-  }
-}
